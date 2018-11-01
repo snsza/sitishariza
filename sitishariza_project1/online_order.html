@@ -1,0 +1,152 @@
+<html>
+<head><title>Safiyya Photobook</title>
+<style>
+nav{
+	margin-top:0px;
+	margin-right:auto;
+	margin-bottom:0px;
+	margin-left:auto;
+	padding:40px;
+	width:75%;
+}
+</style>
+
+<script>
+	function check()
+	{
+		var nm = document.form1.name.value;
+		var ph = document.form1.phone.value;
+		var ad = document.form1.add.value;
+		var qt = document.form1.qtt.value;
+
+		if(nm == "")
+			alert("Please enter your name.");
+		if(ph == "" || isNaN(ph))
+			alert("Please enter your phone number in numeric value");
+		if(ad == "")
+			alert("Please enter your delivery address.");
+		if(qt == "")
+			alert("Please enter the quantity");
+	}
+
+	function total()
+	{
+		var total;
+		var packageType = document.form1.package.value;
+		var pageNum = document.form1.page.value;
+		var quantity = document.form1.qtt.value;
+		var order = prompt("Done ordered? (y/n)");
+		
+		if(order == "y")
+		{
+			if(packageType == "a")
+			{
+				if(pageNum == "pg20")
+				{
+					total = 15.00 * quantity;
+				}
+				if(pageNum == "pg40")
+				{
+					total = 25.00 * quantity;
+				}
+			}
+			if(packageType == "b")
+			{
+				if(pageNum == "pg20")
+				{
+					total = 30.00 * quantity;
+				}
+				if(pageNum == "pg40")
+				{
+					total = 40.00 * quantity;
+				}
+			}
+
+			var message1 = "Hai "+document.form1.name.value+"!";
+			var message2 = "\nYour order has been submitted";
+			var message3 = "\nThe total price is RM"+total.toFixed(2);
+			var message4 = "\nThank you for purchasing Safiyya Photobook.";
+
+			alert(message1+message2+message3+message4);
+		}
+		if(order == "n")
+		{
+			alert("Thank you for visiting our site.");
+		}			
+	}
+</script>
+</head>
+
+<body>
+<hr>
+<h2 align="center"><font face="verdana" color="336666">SAFIYYA PHOTOBOOK ONLINE ORDER FORM</font></h2>
+<hr>
+<nav>
+<form name="form1" onsubmit="check();">
+	<fieldset>
+		<legend><b><i>Customer Details</i></b></legend>
+		Full Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+		<input type="text" name="name" placeholder="Muhammad bin Ahmad"><br>
+		Phone Number&nbsp;&nbsp;&nbsp;&nbsp;:
+		<input type="text" name="phone" placeholder="0123456789"><br>
+		Delivery Address:
+		<textarea rows="4" cols="50" name="add" placeholder="UiTM Tapah, Perak."></textarea><br>
+	</fieldset>
+	<fieldset>
+		<legend><b><i>Order Details</i></b></legend>
+		<table align="center" border="1" width="50%" cellspacing="1" cellpadding="5">
+			<tr align="center">
+				<th>Packages</th>
+				<th>Details</th>
+				<th>Pages</th>
+				<th>Price (RM)</th>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">A</td>
+				<td rowspan="2">
+					-6'x 6' sizes<br>
+					-Softcover
+				</td>
+				<td>20</td>
+				<td>RM15.00</td>
+			</tr>
+			<tr align="center">
+				<td>40</td>
+				<td>RM25.00</td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">B</td>
+				<td rowspan="2">
+					-6'x 6' sizes<br>
+					-Hardcover
+				</td>
+				<td>20</td>
+				<td>RM30.00</td>
+			</tr>
+			<tr align="center">
+				<td>40</td>
+				<td>RM40.00</td>
+			</tr>
+		</table><br>
+		Select to order :<p>
+		Package&nbsp;&nbsp;:
+		<select name="package">
+			<option value="a">Package A</option>
+			<option value="b">Package B</option>
+		</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Quantity&nbsp;:
+		<input type="text" name="qtt" size="7" placeholder="0"><br>
+		Pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+		<select name="page">
+			<option value="pg20">20 Pages</option>
+			<option value="pg40">40 Pages</option>
+		</select>
+	</fieldset><br>
+	<center>
+	<input type="submit" value="ORDER" onclick="total();">
+	<input type="reset" value="RESET">
+	</center>
+</form>
+</nav>
+</body>
+</html>

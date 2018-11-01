@@ -1,0 +1,48 @@
+<html>
+<head><title>Calculator</title>
+
+<script language=javascript>
+
+function displayNum(n1)
+{
+	cal.text1.value += n1;
+}
+
+</script>
+</head>
+
+<body bgcolor="ffcc00">
+<center>
+<hr>
+<h1>Simple Calculator</h1>
+<hr>
+<br><br><br>
+<form name="cal">
+
+	<input type="text" name="text1" placeholder="0" style="width:170px;height:40px;"><p>
+	<input type="button" name="btn7" value="7" onclick="displayNum(btn7.value);" style="width:40px;height:40px;">
+	<input type="button" name="btn8" value="8" onclick="displayNum(btn8.value);" style="width:40px;height:40px;">
+	<input type="button" name="btn9" value="9" onclick="displayNum(btn9.value);" style="width:40px;height:40px;">
+	<input type="button" name="btndiv" value="/" onclick="displayNum(btndiv.value);" style="width:40px;height:40px;">
+	<br>
+	<input type="button" name="btn4" value="4" onclick="displayNum(btn4.value);" style="width:40px;height:40px;">
+	<input type="button" name="btn5" value="5" onclick="displayNum(btn5.value);" style="width:40px;height:40px;">
+	<input type="button" name="btn6" value="6" onclick="displayNum(btn6.value);" style="width:40px;height:40px;">
+	<input type="button" name="btnmul" value="*" onclick="displayNum(btnmul.value);" style="width:40px;height:40px;">
+	<br>
+	<input type="button" name="btn1" value="1" onclick="displayNum(btn1.value);" style="width:40px;height:40px;">
+	<input type="button" name="btn2" value="2" onclick="displayNum(btn2.value);" style="width:40px;height:40px;">
+	<input type="button" name="btn3" value="3" onclick="displayNum(btn3.value);" style="width:40px;height:40px;">
+	<input type="button" name="btnsub" value="-" onclick="displayNum(btnsub.value);" style="width:40px;height:40px;">
+	<br>
+	<input type="button" name="btn0" value="0" onclick="displayNum(btn0.value);" style="width:40px;height:40px;">
+	<input type="button" name="btndot" value="." onclick="displayNum(btndot.value);" style="width:40px;height:40px;">
+	<input type="button" name="btneql" value="=" onclick="text1.value=eval(text1.value);" style="width:40px;height:40px;">
+	<input type="button" name="btnadd" value="+" onclick="displayNum(btnadd.value);" style="width:40px;height:40px;">
+	<p>
+	<input type="reset" value="CLEAR" style="width:170px;height:30px;">
+
+</form>
+</center>
+</body>
+</html>

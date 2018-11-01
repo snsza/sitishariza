@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Tutorial_1 JavaScript</title>
+<style>
+header{
+	color:336666;
+	text-align:center;
+	padding:5px;
+	font-family:tahoma;
+	letter-spacing:2px;
+}	
+nav{
+	font-family:tahoma;
+}	
+article{
+	background-color:ffccff;
+	margin-top:0px;
+	margin-right:auto;
+	margin-bottom:0px;
+	margin-left:auto;
+	padding:70px;
+	width:75%;
+}
+section:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+footer{
+	padding:5px;
+	text-align:center;
+	color:336666;
+	clear:both;
+	font-family:courier;
+}
+</style>
+</head>
+
+<body background="images/rose.jpg">
+
+<section>
+<header>
+<hr id="top">
+<img src="images/web.png">
+<hr>
+</header>
+
+<nav>
+	<center><table border="1" width="86%" cellspacing="0" cellpadding="15" bgcolor="ffcccc">
+		<tr align=center>
+			<td><a href="homePage.html">HOME</a></li></td>
+			<td><a href="javascript.html">JAVASCRIPT</a></td>
+			<td><a href="tutorial1.html">TUTORIAL 1</a></td>
+			<td><a href="tutorial2.html">TUTORIAL 2</a></td>
+			<td><a href="feedback.html">FEEDBACK</a></td>
+		</tr>
+	</table></center>
+</nav>
+
+<article>
+<center><img src="images/Advanced_JavaScript.png" width="600" height="90"></center>
+<h1 id="video">Video Tutorial :</h1>
+
+<video controls width="100%" height="400">
+	<source src="videos/Tuto1_calculator.mp4" type="video/mp4">
+</video>
+<br><br>
+
+<h1>JavaScript Explainations :</h1>
+Based on my previous video tutorial, I have created a simple calculator page by using a full
+coding in notepad. In my html with javaScript coding, I used a function and an event to create 
+the calculator page. Below are the screenshots of my html with javaScript coding :
+<p>
+<ul>
+	<li><b><u>Full Coding</u></b></li><br>
+		<img src="images/calculatorFull.png"><br><br>
+	<li><b><u>JavaScript Function</u></b></li><br>
+		<img src="images/functionDisplayNum.png"><br><br>
+		I created a function named <b><i>function displayNum(n1)</i></b> inside a 
+		script element which is script tag. The function that I have created is used
+		to read every value from the form inside the body that being called by the 
+		parameter, <b>n1</b>. Then, it will display every value in the textbox named
+		<b>text1</b>.<br><br>
+	<li><b><u>JavaScript Form</u></b></li><br>
+		<img src="images/calculatorForm.png" width="900"><br><br>
+		Inside the form, all the input types are in button so that it will display
+		like a calculator in the webpage. Besides that, I have also include a CSS
+		in my html coding to make all the width and height of the calculator's
+		buttons are in the same size.<br><br>
+	<li><b><u>Mouse Event</u></b></li><br>
+		<img src="images/calculatorOnclick.png"><br><br>
+		I used mouse event which is <b>onclick</b> event so that an event will occurs when 
+		the users clicks on an element, which is the button. Then, the onclick event will 
+		be initialized to the function that I have created with a parameter, 
+		<b>onclick="displayNum(btn7.value);"</b>. The parameter consists of the name of the 
+		input form as well as its value.<br><br>
+		<img src="images/calculatorOnclickEval.png"><br><br>
+		Inside the form, there is an input type of button that I have set it to has a specific 
+		function of equal to or sum in the calculator. Therefore, I used an onclick event that
+		be initialized with the value in the textbox equal to an eval function, <b>onclick="text1.value = eval(text1.value);"</b>. 
+		The eval function is used to evaluate/execute expressions or statements. So, I put parameter in the eval function 
+		that consists of the value in the textbox, so that it will execute all the expressions in the textbox.<br><br>
+	<li><b><u>Reset</u></b></li><br>
+		<img src="images/calculatorReset.png"><br><br>
+		There is also a <b>CLEAR</b> or reset button on my calculator so that the users are able to
+		reset all the input. I used an input type of reset, <b>input type="reset"</b>.<br><br>
+	<li><b><u>View of Simple Calculator in the Webpage</u></b></li><br>
+		<img src="images/calculator.png"><br><br>
+</ul>
+<a href="#top">
+	<img src="images/top.png" width="90" height="90" align="right">
+</a>
+<br><br>
+</article>
+</section>
+
+<footer>
+<p>&copysitishariza
+	<a href="homePage.html">Home</a>
+	<a href="javascript.html">JavaScript</a>
+	<a href="tutorial1.html">Tutorial 1</a>
+	<a href="tutorial2.html">Tutorial 2</a>
+	<a href="feedback.html">Feedback</a>
+</footer>
+</body>
+</html>
